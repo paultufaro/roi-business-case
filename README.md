@@ -7,6 +7,8 @@ A small web tool that builds an ROI business case from two savings levers:
 
 Enter your spend figures and program costs; the tool shows annual savings, net benefit, ROI and payback period.
 
+Live site: https://paultufaro.github.io/roi-business-case/ (redeployed automatically on every push to `main`).
+
 ## Running it locally
 
 Requires [Node.js](https://nodejs.org) 22 or newer.
