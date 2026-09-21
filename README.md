@@ -2,8 +2,8 @@
 
 A small web tool that builds an ROI business case from two savings levers:
 
-1. **Reduced SG&A expenses** — 1%–3% through improved visibility, spend optimization and cost reduction.
-2. **Optimizing the right resources** — 1%–3% of open cost savings.
+1. **Reduced SG&A expenses** — 0%–3% through improved visibility, spend optimization and cost reduction.
+2. **Optimizing the right resources** — 0%–3% of open cost savings.
 
 Enter your spend figures and program costs; the tool shows annual savings, net benefit, ROI and payback period.
 

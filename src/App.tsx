@@ -63,14 +63,14 @@ function RateSlider({
       <span className="field-hint">{hint}</span>
       <input
         type="range"
-        min={1}
+        min={0}
         max={3}
         step={0.1}
         value={value}
         onChange={(event) => onChange(Number(event.target.value))}
       />
       <div className="scale">
-        <span>1%</span>
+        <span>0%</span>
         <span>3%</span>
       </div>
     </label>
@@ -108,7 +108,7 @@ export default function App() {
             />
             <RateSlider
               label="Savings rate"
-              hint="1%–3% through improved visibility, spend optimization and cost reduction."
+              hint="0%–3% through improved visibility, spend optimization and cost reduction."
               value={inputs.sgaSavingsRate}
               onChange={set('sgaSavingsRate')}
             />
@@ -125,7 +125,7 @@ export default function App() {
             />
             <RateSlider
               label="Savings rate"
-              hint="1%–3% of open cost savings from optimizing the right resources."
+              hint="0%–3% of open cost savings from optimizing the right resources."
               value={inputs.openCostSavingsRate}
               onChange={set('openCostSavingsRate')}
             />
