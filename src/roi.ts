@@ -45,7 +45,7 @@ export function calculateRoi(inputs: RoiInputs): RoiResults {
 }
 
 export const currency = (value: number) =>
-  value.toLocaleString(undefined, {
+  value.toLocaleString('en-US', {
     style: 'currency',
     currency: 'USD',
     maximumFractionDigits: 0,
