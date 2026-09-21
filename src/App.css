@@ -1,5 +1,5 @@
 .page {
-  max-width: 840px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 2.5rem 1.25rem 4rem;
   text-align: left;
@@ -14,6 +14,24 @@ header p {
   margin: 0 0 2rem;
   color: #5b6472;
   max-width: 60ch;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.results-column {
+  position: sticky;
+  top: 1.25rem;
 }
 
 .panel {
@@ -91,7 +109,7 @@ input[type='range'] {
 
 .results .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 0.9rem;
 }
 
