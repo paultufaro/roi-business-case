@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react';
 import './App.css';
 import { calculateRoi, currency, type RoiInputs } from './roi';
 
+const formatYears = (years: number) => `${years} ${years === 1 ? 'year' : 'years'}`;
+
 const defaults: RoiInputs = {
   sgaSpend: 50_000_000,
   sgaSavingsRate: 2,
@@ -34,7 +36,7 @@ function MoneyField({
           min={0}
           step={1000}
           value={value}
-          onChange={(event) => onChange(Number(event.target.value) || 0)}
+          onChange={(event) => onChange(Math.max(0, Number(event.target.value) || 0))}
         />
       </div>
     </label>
@@ -139,7 +141,7 @@ export default function App() {
         />
         <label className="field">
           <span className="field-label">
-            Time horizon <strong>{inputs.horizonYears} years</strong>
+            Time horizon <strong>{formatYears(inputs.horizonYears)}</strong>
           </span>
           <input
             type="range"
@@ -186,7 +188,7 @@ export default function App() {
             </strong>
           </div>
           <div className="metric">
-            <span>Total cost ({inputs.horizonYears} yrs)</span>
+            <span>Total cost ({formatYears(inputs.horizonYears)})</span>
             <strong>{currency(results.totalCost)}</strong>
           </div>
         </div>
