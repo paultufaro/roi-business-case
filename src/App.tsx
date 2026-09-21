@@ -32,11 +32,10 @@ function MoneyField({
       <div className="money-input">
         <span>$</span>
         <input
-          type="number"
-          min={0}
-          step={1000}
-          value={value}
-          onChange={(event) => onChange(Math.max(0, Number(event.target.value) || 0))}
+          type="text"
+          inputMode="numeric"
+          value={value.toLocaleString('en-US')}
+          onChange={(event) => onChange(Math.max(0, Number(event.target.value.replace(/\D/g, '')) || 0))}
         />
       </div>
     </label>
