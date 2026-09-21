@@ -1,0 +1,161 @@
+.page {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+  text-align: left;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0 0 2rem;
+  color: #5b6472;
+  max-width: 60ch;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #e3e7ee;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.panel h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.1rem;
+}
+
+.field {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.field-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.field-hint {
+  display: block;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin: 0.15rem 0 0.5rem;
+}
+
+.money-input {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid #d3d9e2;
+  border-radius: 8px;
+  padding: 0.45rem 0.7rem;
+  background: #fbfcfe;
+}
+
+.money-input span {
+  color: #6b7280;
+}
+
+.money-input input {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  color: inherit;
+}
+
+input[type='range'] {
+  width: 100%;
+  accent-color: #2563eb;
+}
+
+.scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #8a93a2;
+}
+
+.line-result {
+  margin: 0;
+  font-weight: 600;
+  color: #0f766e;
+}
+
+.results .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.9rem;
+}
+
+.metric {
+  border: 1px solid #e3e7ee;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  background: #f9fafc;
+}
+
+.metric span {
+  display: block;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.35rem;
+}
+
+.metric strong {
+  font-size: 1.35rem;
+}
+
+.metric.highlight {
+  background: #eef4ff;
+  border-color: #c7d9ff;
+}
+
+.reset {
+  margin-top: 1.25rem;
+  border: 1px solid #d3d9e2;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.reset:hover {
+  background: #f3f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  .panel {
+    background: #171a21;
+    border-color: #2a2f3a;
+  }
+
+  .metric {
+    background: #1d212a;
+    border-color: #2a2f3a;
+  }
+
+  .metric.highlight {
+    background: #1b2740;
+    border-color: #2f4472;
+  }
+
+  .money-input {
+    background: #1d212a;
+    border-color: #2a2f3a;
+  }
+
+  .reset {
+    background: #1d212a;
+    border-color: #2a2f3a;
+    color: inherit;
+  }
+}
